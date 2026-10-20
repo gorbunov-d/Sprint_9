@@ -1,0 +1,10 @@
+.venv
+.git
+__pycache__
+.pytest_cache
+allure-results
+allure-report
+.docker-allure-results
+.local-allure-results
+artifacts
+.env
