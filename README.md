@@ -133,3 +133,12 @@ Chrome для Selenoid, собирает Docker-образ и запускает
 Linux amd64. Allure-отчёт сохраняется как артефакт `allure-report`, в том числе
 при ошибке тестов. Изменения только README, отчёта и материалов в `artifacts`
 не запускают повторные тесты при push.
+
+## Успешный запуск GitHub Actions
+
+20 октября 2026 года workflow завершился со статусом **Success**:
+[запуск №1](https://github.com/gorbunov-d/Sprint_9/actions/runs/39442207220).
+Общее время — 1 минута 22 секунды. Job `tests` успешно завершён;
+готовый Allure-отчёт сохранён в артефакте `allure-report`.
+
+![Успешный GitHub Actions](artifacts/github-actions-success.jpg)
