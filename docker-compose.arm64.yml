@@ -1,4 +1,0 @@
-services:
-  selenoid:
-    volumes:
-      - ./selenoid/browsers.arm64.json:/etc/selenoid/browsers.json:ro

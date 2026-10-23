@@ -1,4 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","757","После входа открывается главная страница с кнопкой «Выход»","test","Tue Oct 20 17:28:45 MSK 2026","passed","Tue Oct 20 17:28:45 MSK 2026","TestLogin","test_login","",""
-"","1013","После регистрации открывается страница с формой авторизации","test","Tue Oct 20 17:28:55 MSK 2026","passed","Tue Oct 20 17:28:56 MSK 2026","TestRegistration","test_registration","",""
-"","1709","Созданный рецепт отображается в карточке с заданным названием","test","Tue Oct 20 17:28:50 MSK 2026","passed","Tue Oct 20 17:28:52 MSK 2026","TestRecipeCreation","test_recipe_creation","",""
