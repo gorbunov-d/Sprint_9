@@ -1,0 +1,118 @@
+ Service tests  Building
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [tests internal] load build definition from Dockerfile
+#1 transferring dockerfile: 210B done
+#1 DONE 0.0s
+
+#2 [tests internal] load metadata for docker.io/library/python:3.11-slim
+#2 DONE 0.3s
+ Service tests  Built
+
+#3 [tests internal] load .dockerignore
+#3 transferring context: 188B done
+#3 DONE 0.0s
+
+#4 [tests 1/5] FROM docker.io/library/python:3.11-slim@sha256:e88e9763f943ec1834f992a4b51e0f24500486803e8bc534e5767af9ea65f6ce
+#4 DONE 0.0s
+
+#5 [tests internal] load build context
+#5 transferring context: 16.25kB done
+#5 DONE 0.0s
+
+#6 [tests 2/5] WORKDIR /app
+#6 CACHED
+
+#7 [tests 3/5] COPY requirements.txt .
+#7 CACHED
+
+#8 [tests 4/5] RUN pip install --no-cache-dir -r requirements.txt
+#8 CACHED
+
+#9 [tests 5/5] COPY . .
+#9 DONE 0.0s
+
+#10 [tests] exporting to image
+#10 exporting layers done
+#10 writing image sha256:d529489fecce971b1fb0f3bcb971f5baa468f2689d5f021ac5d73a0afdff8e31 done
+#10 naming to docker.io/library/sprint9-tests done
+#10 DONE 0.0s
+
+#11 [tests] resolving provenance for metadata file
+#11 DONE 0.0s
+ Container sprint9-selenoid-1  Created
+ Container sprint9-tests-1  Recreate
+ Container sprint9-tests-1  Recreated
+Attaching to selenoid-1, tests-1
+selenoid-1  | 2026/10/20 14:28:40 [-] [INIT] [Loading configuration files...]
+selenoid-1  | 2026/10/20 14:28:40 [-] [INIT] [Loaded configuration from /etc/selenoid/browsers.json]
+selenoid-1  | 2026/10/20 14:28:40 [-] [INIT] [Video Dir: /opt/selenoid/video]
+selenoid-1  | 2026/10/20 14:28:40 [-] [INIT] [Did not manage to determine your Docker API version - using default version: 1.45]
+selenoid-1  | 2026/10/20 14:28:40 [-] [INIT] [Timezone: UTC]
+selenoid-1  | 2026/10/20 14:28:40 [-] [INIT] [Listening on :4444]
+tests-1     | ============================= test session starts ==============================
+tests-1     | platform linux -- Python 3.11.17, pytest-8.3.4, pluggy-1.7.0 -- /usr/local/bin/python3.11
+tests-1     | cachedir: .pytest_cache
+tests-1     | rootdir: /app
+tests-1     | configfile: pytest.ini
+tests-1     | testpaths: test
+tests-1     | plugins: allure-pytest-2.13.5
+tests-1     | collecting ... collected 3 items
+tests-1     |
+selenoid-1  | 2026/10/20 14:28:41 [-] [NEW_REQUEST] [unknown] [172.22.0.3]
+selenoid-1  | 2026/10/20 14:28:41 [-] [NEW_REQUEST_ACCEPTED] [unknown] [172.22.0.3]
+selenoid-1  | 2026/10/20 14:28:41 [0] [LOCATING_SERVICE] [chrome] []
+selenoid-1  | 2026/10/20 14:28:41 [-] [DEFAULT_VERSION] [Using default version: 131.0]
+selenoid-1  | 2026/10/20 14:28:41 [0] [USING_DOCKER] [chrome] [131.0]
+selenoid-1  | 2026/10/20 14:28:41 [0] [CREATING_CONTAINER] [selenium/standalone-chromium:4.27.0]
+selenoid-1  | 2026/10/20 14:28:41 [0] [STARTING_CONTAINER] [selenium/standalone-chromium:4.27.0] [7db28a9038078b6fd659f5af515273568f17222b57b186ed2a8baa2089a43342]
+selenoid-1  | 2026/10/20 14:28:41 [0] [CONTAINER_STARTED] [selenium/standalone-chromium:4.27.0] [7db28a9038078b6fd659f5af515273568f17222b57b186ed2a8baa2089a43342] [0.09s]
+selenoid-1  | 2026/10/20 14:28:43 [0] [SERVICE_STARTED] [selenium/standalone-chromium:4.27.0] [7db28a9038078b6fd659f5af515273568f17222b57b186ed2a8baa2089a43342] [1.87s]
+selenoid-1  | 2026/10/20 14:28:43 [0] [PROXY_TO] [7db28a9038078b6fd659f5af515273568f17222b57b186ed2a8baa2089a43342] [http://172.22.0.4:4444/wd/hub]
+selenoid-1  | 2026/10/20 14:28:43 [0] [SESSION_ATTEMPTED] [http://172.22.0.4:4444/wd/hub] [1]
+selenoid-1  | 2026/10/20 14:28:43 [0] [SESSION_CREATED] [38976d21536019beb6005691f9db3148] [1] [2.21s]
+selenoid-1  | 2026/10/20 14:28:45 [54] [SESSION_DELETED] [38976d21536019beb6005691f9db3148]
+selenoid-1  | 2026/10/20 14:28:46 [0] [REMOVING_CONTAINER] [7db28a9038078b6fd659f5af515273568f17222b57b186ed2a8baa2089a43342]
+tests-1     | test/test_login.py::TestLogin::test_login_opens_recipes PASSED           [ 33%]
+selenoid-1  | 2026/10/20 14:28:46 [-] [NEW_REQUEST] [unknown] [172.22.0.3]
+selenoid-1  | 2026/10/20 14:28:46 [-] [NEW_REQUEST_ACCEPTED] [unknown] [172.22.0.3]
+selenoid-1  | 2026/10/20 14:28:46 [55] [LOCATING_SERVICE] [chrome] []
+selenoid-1  | 2026/10/20 14:28:46 [-] [DEFAULT_VERSION] [Using default version: 131.0]
+selenoid-1  | 2026/10/20 14:28:46 [55] [USING_DOCKER] [chrome] [131.0]
+selenoid-1  | 2026/10/20 14:28:46 [55] [CREATING_CONTAINER] [selenium/standalone-chromium:4.27.0]
+selenoid-1  | 2026/10/20 14:28:46 [55] [STARTING_CONTAINER] [selenium/standalone-chromium:4.27.0] [5a092e8cc6fc3e54e9a400b9dfde734220bbfa4a70d3b4a0e1f4c7911e448fde]
+selenoid-1  | 2026/10/20 14:28:46 [0] [CONTAINER_REMOVED] [7db28a9038078b6fd659f5af515273568f17222b57b186ed2a8baa2089a43342]
+selenoid-1  | 2026/10/20 14:28:46 [55] [CONTAINER_STARTED] [selenium/standalone-chromium:4.27.0] [5a092e8cc6fc3e54e9a400b9dfde734220bbfa4a70d3b4a0e1f4c7911e448fde] [0.14s]
+selenoid-1  | 2026/10/20 14:28:48 [55] [SERVICE_STARTED] [selenium/standalone-chromium:4.27.0] [5a092e8cc6fc3e54e9a400b9dfde734220bbfa4a70d3b4a0e1f4c7911e448fde] [1.99s]
+selenoid-1  | 2026/10/20 14:28:48 [55] [PROXY_TO] [5a092e8cc6fc3e54e9a400b9dfde734220bbfa4a70d3b4a0e1f4c7911e448fde] [http://172.22.0.5:4444/wd/hub]
+selenoid-1  | 2026/10/20 14:28:48 [55] [SESSION_ATTEMPTED] [http://172.22.0.5:4444/wd/hub] [1]
+selenoid-1  | 2026/10/20 14:28:48 [55] [SESSION_CREATED] [cf6c557aa46c4afcc19e9d468e7ccca4] [1] [2.47s]
+selenoid-1  | 2026/10/20 14:28:52 [160] [SESSION_DELETED] [cf6c557aa46c4afcc19e9d468e7ccca4]
+selenoid-1  | 2026/10/20 14:28:52 [55] [REMOVING_CONTAINER] [5a092e8cc6fc3e54e9a400b9dfde734220bbfa4a70d3b4a0e1f4c7911e448fde]
+tests-1     | test/test_recipe_creation.py::TestRecipeCreation::test_created_recipe_card PASSED [ 66%]
+selenoid-1  | 2026/10/20 14:28:52 [-] [NEW_REQUEST] [unknown] [172.22.0.3]
+selenoid-1  | 2026/10/20 14:28:52 [-] [NEW_REQUEST_ACCEPTED] [unknown] [172.22.0.3]
+selenoid-1  | 2026/10/20 14:28:52 [161] [LOCATING_SERVICE] [chrome] []
+selenoid-1  | 2026/10/20 14:28:52 [-] [DEFAULT_VERSION] [Using default version: 131.0]
+selenoid-1  | 2026/10/20 14:28:52 [161] [USING_DOCKER] [chrome] [131.0]
+selenoid-1  | 2026/10/20 14:28:52 [161] [CREATING_CONTAINER] [selenium/standalone-chromium:4.27.0]
+selenoid-1  | 2026/10/20 14:28:52 [161] [STARTING_CONTAINER] [selenium/standalone-chromium:4.27.0] [593ed0a1d7384f2bdd12696c738a6da190a1634842e188d3918853a9a3cc0c04]
+selenoid-1  | 2026/10/20 14:28:52 [55] [CONTAINER_REMOVED] [5a092e8cc6fc3e54e9a400b9dfde734220bbfa4a70d3b4a0e1f4c7911e448fde]
+selenoid-1  | 2026/10/20 14:28:52 [161] [CONTAINER_STARTED] [selenium/standalone-chromium:4.27.0] [593ed0a1d7384f2bdd12696c738a6da190a1634842e188d3918853a9a3cc0c04] [0.11s]
+selenoid-1  | 2026/10/20 14:28:54 [161] [SERVICE_STARTED] [selenium/standalone-chromium:4.27.0] [593ed0a1d7384f2bdd12696c738a6da190a1634842e188d3918853a9a3cc0c04] [1.81s]
+selenoid-1  | 2026/10/20 14:28:54 [161] [PROXY_TO] [593ed0a1d7384f2bdd12696c738a6da190a1634842e188d3918853a9a3cc0c04] [http://172.22.0.4:4444/wd/hub]
+selenoid-1  | 2026/10/20 14:28:54 [161] [SESSION_ATTEMPTED] [http://172.22.0.4:4444/wd/hub] [1]
+selenoid-1  | 2026/10/20 14:28:54 [161] [SESSION_CREATED] [4397b77448bf33adb2099db4763d3535] [1] [2.20s]
+selenoid-1  | 2026/10/20 14:28:56 [206] [SESSION_DELETED] [4397b77448bf33adb2099db4763d3535]
+selenoid-1  | 2026/10/20 14:28:56 [161] [REMOVING_CONTAINER] [593ed0a1d7384f2bdd12696c738a6da190a1634842e188d3918853a9a3cc0c04]
+tests-1     | test/test_registration.py::TestRegistration::test_registration_opens_login PASSED [100%]
+tests-1     |
+tests-1     | ============================== 3 passed in 15.00s ==============================
+selenoid-1  | 2026/10/20 14:28:56 [161] [CONTAINER_REMOVED] [593ed0a1d7384f2bdd12696c738a6da190a1634842e188d3918853a9a3cc0c04]
+
+tests-1 exited with code 0
+Aborting on container exit...
+ Container sprint9-tests-1  Stopping
+ Container sprint9-tests-1  Stopped
+ Container sprint9-selenoid-1  Stopping
+ Container sprint9-selenoid-1  Stopped
